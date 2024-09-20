@@ -9,3 +9,19 @@
 # the current population, how many years in the future
 # Data Out: Whether the population increased or decreased
 # Credits: class resources
+Birth_secs = int(input("how many seconds between each birth? "))
+Death_secs = int(input("how many seconds between each birth? "))
+immigrant_secs = int(input("how many seconds between immigrants? "))
+population = int(input("what is the current population? "))
+future_years = int(input("how many years in the future? "))
+secs_per_year = 31536000
+
+change_population = (secs_per_year/ Birth_secs + secs_per_year / immigrant_secs - secs_per_year / Death_secs) * future_years
+future_population = population + change_population
+
+print("The US population in", future_years, "years will be", future_population)
+
+if future_population > population:
+    print ("population increased")
+else:
+    print ("population decreased")
