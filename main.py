@@ -8,20 +8,32 @@
 # Data In: How many second between each birth, how many seconds between each death, how many seconds between each immigration,
 # the current population, how many years in the future
 # Data Out: Whether the population increased or decreased
-# Credits: class resources
-Birth_secs = int(input("how many seconds between each birth? "))
-Death_secs = int(input("how many seconds between each birth? "))
-immigrant_secs = int(input("how many seconds between immigrants? "))
-population = int(input("what is the current population? "))
-future_years = int(input("how many years in the future? "))
+# Credits: Class resources
+
+#ask user how many seconds between each birth, death, and immigrants
+birth_secs = int(input("How many seconds between each birth?"))
+death_secs = int(input("How many seconds between each birth?"))
+immigrant_secs = int(input("How many seconds between immigrants?"))
+
+#ask user what the current population is
+population = int(input("What is the current population?"))
+
+#ask user how many years in the future they want in order to see the expected population
+future_years = int(input("How many years in the future?"))
+
 secs_per_year = 31536000
 
-change_population = (secs_per_year/ Birth_secs + secs_per_year / immigrant_secs - secs_per_year / Death_secs) * future_years
+#calculation to find the change in population
+change_population = (secs_per_year/ birth_secs + secs_per_year / immigrant_secs - secs_per_year / death_secs) * future_years
+
+#calculation to find the future population
 future_population = population + change_population
 
-print("The US population in", future_years, "years will be", future_population)
+#outputs the population in the amount of years the user inputs
+print("The population in", future_years, "years will be:", future_population)
 
+#outputs if the population increased or decreased in the time amount of years the user input
 if future_population > population:
-    print ("population increased")
+    print ("Population increased")
 else:
-    print ("population decreased")
+    print ("Population decreased")
