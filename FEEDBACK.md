@@ -21,7 +21,7 @@
 ### Open Test
 |Result |Description|
 |--------------|-----------------------------------------|
-|**YES-**| The algorithm matches the code   |
+|**NO-**| The algorithm matches the code   |
 |**YES-**| There is a block of introductory comments at the top |  
 |**YES-**| Purpose of the program is stated below or above intro comments as a comment  |
 |**YES-**| There are comments in the code (do not need to determine if they are good)|
@@ -29,5 +29,5 @@
 
 ### Comments on the grading
 - Address all the NOs
-- Failing a test case is a reason for revision 
-### Grade: R
+-  
+### Grade: M
